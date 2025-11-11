@@ -6,7 +6,7 @@ num = 5
 salida = ""
 sube_baja = 1
 
-for i in range(1, (2 * num) + 1):
+for i in range(1, (2 * num)):
     for i in range(1, num_asteriscos + 1):
         salida = salida + "*"
     print(salida)

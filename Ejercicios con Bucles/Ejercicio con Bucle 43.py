@@ -2,5 +2,5 @@
 
 palabra = input("Introduce una palabra, por favor: ")
 
-for i in (palabra):
-    print (i)
+for i in range(len(palabra)):
+    print(f"La posición {i} hay una {palabra[i]}")
