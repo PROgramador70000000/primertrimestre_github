@@ -3,7 +3,7 @@
 num = 100
 salida = ""
 
-for i in range(0, num + 1, 3):
-    salida = salida + (f"{i}" + ", ")
+for i in range(3, num + 1, 3):
+    salida = salida + (", " + f"{i}")
 
-print(salida)
+print("0" + salida)
