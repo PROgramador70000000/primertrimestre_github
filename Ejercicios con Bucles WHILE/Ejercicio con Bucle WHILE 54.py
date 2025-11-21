@@ -18,3 +18,5 @@ while total < 50:
         print(f"El total acumulado es de {total} y llevas {repeticiones} repetición realizada. ")
     else:
         print(f"El total acumulado es de {total} y llevas {repeticiones} repeticiones realizadas. ")
+
+print("El total ya suma 50; fin del programa. ")
