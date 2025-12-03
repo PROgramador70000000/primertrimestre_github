@@ -41,7 +41,6 @@ if respuesta in "sS":
     exit()
 elif respuesta in "nN":
     print("De acuerdo, cada vez que quieras lanzar el dado pulsa intro: ")
-    intentos = 100
     for i in range(100):
         espera = input("")
         numero = random.randint(1, 6)
@@ -58,8 +57,7 @@ elif respuesta in "nN":
             cinco += 1
         elif numero == 6:
             seis += 1
-        intentos -= 1
-        print(f"Te quedan {intentos} intentos. ")
+        print(f"Te quedan {100 - (i + 1)} intentos. ")
     print(f"Uno: {uno}")
     print(f"Dos: {dos}")
     print(f"Tres: {tres}")

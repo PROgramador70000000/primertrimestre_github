@@ -15,4 +15,3 @@ if respuesta <= 5 and respuesta >= 1:
         print(f"El numero secreto era {numero}")
 else:
     print("El número que has introducido no está entre 1 y 5... ¡Vuelve a intentarlo!")
-
