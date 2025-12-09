@@ -1,5 +1,4 @@
 #66. Repite el ejercicio 63. En lugar de ‘tirar’ 100 veces un dado, modifica el programa para ver cómo se comporta el dado en lanzamientos producidos durante aprox 3 segundos. 
-
 import time
 import random
 
@@ -10,6 +9,9 @@ tres = 0
 cuatro = 0
 cinco = 0
 seis = 0
+
+print("Voy a tirar un dado durnte 3 segundos. ")
+print("CARGANDO...") 
 
 while (time.time() - inicio) < 3:
     numero = random.randint(1, 6)
