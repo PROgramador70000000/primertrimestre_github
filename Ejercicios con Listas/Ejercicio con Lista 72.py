@@ -2,8 +2,8 @@
 
 lista = []
 respuesta = "s"
-excepciones = "áéíóú"
-correctas = "aeiou"
+excepciones = "áéíóúàèìòù"
+correctas = "aeiouaeiou"
 
 while respuesta == "s":
     letra = input("Introduce una letra: ")
