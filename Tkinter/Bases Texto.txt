@@ -1,0 +1,17 @@
+1. VENTANA: 
+Se crea una ventana asignando a una variable el método tk.Tk(), por ejemplo: 
+ventana = tk.Tk
+y luego, para que no desaparezca al cabo de un frame, se utiliza un bucle: 
+ventana.mainloop()
+
+2. TÍTULO: 
+Para cambiar y asignar un título a la ventana se utiliza el método:
+ventana.title('titulo')
+y ya está. 
+
+3. TAMAÑO:
+Para cambiar el tamaño de la ventana, se tiene que utilizar el comando 'geometry'. 
+El patrón es: 'anchoxalto+x+y', como por ejemplo: '600x400+50+50'. 
+En x y y se pueden asignar valores negativos, porque lo que hacen es canbiar el borde nuevo en base al anterior. 
+Por ejemplo, x = +50 ampliaría el borde izquierdo en 50 píxeles, mientras que -50 ampliaría el borde derecho. 
+Lo mismo se aplica a y. 
