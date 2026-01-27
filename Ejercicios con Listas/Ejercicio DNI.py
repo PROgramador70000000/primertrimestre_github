@@ -10,23 +10,24 @@ while respuesta == "s":
 
     numeros = input("Introduce los números de tu DNI: ")
     valido = 1
-    if not len(numeros) == 8:
+    if not len(numeros) == 8 and valido == 1:
         print("La longitud del DNI introducido no es correcta. ¡Vuelve a intentarlo! ")
         valido = 0
         lista_intentos.append(0)
         incorrectos.append(numeros)
 
-    if not numeros.isdigit():
+    if not numeros.isdigit() and valido == 1:
         print("Tus números del DNI no son completamente numéricos. Comprueba cualquier error. ")
         valido = 0
         lista_intentos.append(1)
         incorrectos.append(numeros)
     
-    if not int(numeros) % 23 < 23:
-        print("El número del DNI no es válido. ¡Vuelve a intentarlo! ")
-        valido = 0
-        lista_intentos.append(2)
-        incorrectos.append(numeros)
+    if valido == 1:
+        if not int(numeros) % 23 < 23:
+            print("El número del DNI no es válido. ¡Vuelve a intentarlo! ")
+            valido = 0
+            lista_intentos.append(2)
+            incorrectos.append(numeros)
 
     if valido == 1:
         lista_intentos.append(3)
@@ -37,13 +38,13 @@ while respuesta == "s":
 
     respuesta = input("¿Quieres introducir otro DNI? (s/n): ")
 
-correctos = correctos.sort()
-incorrectos = incorrectos.sort(reverse = True)
-porcentaje_correctos = (len(correctos) / len(lista_intentos)) * 100
-porcentaje_incorrectos = (len(incorrectos) / len(lista_intentos)) * 100
-porcentaje_longitud = (lista_intentos.count(0) / len(lista_intentos)) * 100
-porcentaje_numérico = (lista_intentos.count(1) / len(lista_intentos)) * 100
-porcentaje_error = (lista_intentos.count(2) / len(lista_intentos)) * 100
+correctos.sort()
+incorrectos.sort(reverse = True)
+porcentaje_correctos = format((len(correctos) / len(lista_intentos)) * 100, ".2f")
+porcentaje_incorrectos = format((len(incorrectos) / len(lista_intentos)) * 100, ".2f")
+porcentaje_longitud = format((lista_intentos.count(0) / len(lista_intentos)) * 100, ".2f")
+porcentaje_numérico = format((lista_intentos.count(1) / len(lista_intentos)) * 100, ".2f")
+porcentaje_error = format((lista_intentos.count(2) / len(lista_intentos)) * 100, ".2f")
 
 print("-------- RESUMEN --------")
 print("-------------------------")
