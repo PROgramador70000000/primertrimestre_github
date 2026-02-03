@@ -4,12 +4,19 @@ ventana = tk.Tk
 y luego, para que no desaparezca al cabo de un frame, se utiliza un bucle: 
 ventana.mainloop()
 
-2. TÍTULO: 
+2. TEXTO:
+Los textos se llaman 'labels', y se asignan a una variable con el comando:
+texto = tk.Label(ventana, text = 'texto')
+Donde tk se pone para acceder a la biblioteca de Tkinter y Label es una función. 
+Dentro de la función se pone la variable asignada a la ventana (en este caso, ventana)
+y luego das a text el texto que quieres mostrar. 
+
+3. TÍTULO: 
 Para cambiar y asignar un título a la ventana se utiliza el método:
 ventana.title('titulo')
 y ya está. 
 
-3. TAMAÑO:
+4. TAMAÑO:
 Para cambiar el tamaño de la ventana, se tiene que utilizar el comando 'geometry'. 
 El patrón es: 'anchoxalto+x+y', como por ejemplo: '600x400+50+50'. 
 En x y y se pueden asignar valores negativos, porque lo que hacen es canbiar el borde nuevo en base al anterior. 

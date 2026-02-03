@@ -5,6 +5,7 @@ respuesta = "s"
 lista_intentos = []
 correctos = []
 incorrectos = []
+NIFs = []
 
 while respuesta == "s":
 
@@ -34,12 +35,12 @@ while respuesta == "s":
         letra = letras[int(numeros) % 23]
         DNI = f"{numeros}-{letra}"
         print(f"Tu DNI completo es {DNI}")
-        correctos.append(numeros)
+        correctos.append(DNI)
 
     respuesta = input("¿Quieres introducir otro DNI? (s/n): ")
 
 correctos.sort()
-incorrectos.sort(reverse = True)
+incorrectos.sort()
 porcentaje_correctos = format((len(correctos) / len(lista_intentos)) * 100, ".2f")
 porcentaje_incorrectos = format((len(incorrectos) / len(lista_intentos)) * 100, ".2f")
 porcentaje_longitud = format((lista_intentos.count(0) / len(lista_intentos)) * 100, ".2f")
@@ -54,8 +55,10 @@ print("DNIs incorrectos: ")
 print(incorrectos)
 print(f"Has introducido {len(incorrectos)} DNIs incorrectos. ")
 print(f"Y {len(correctos)} DNIs correctos. ")
+print(f"Has introducido un total de {len(correctos) + len(incorrectos)} DNIs. ")
 print(f"Has introducido un {porcentaje_correctos}% de DNIs correctos. ")
 print(f"Un {porcentaje_incorrectos}% de DNIs incorrectos. ")
 print(f"Un {porcentaje_longitud}% de errores de longitud. ")
 print(f"Un {porcentaje_numérico}% de errores de formato (no has introducido solo números). ")
 print(f"Y un {porcentaje_error}% de errores de resto (el número no es correcto). ")
+print("Fin del programa. ")
